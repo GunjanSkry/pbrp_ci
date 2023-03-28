@@ -2,6 +2,13 @@
 
 source $CONFIG
 
+telegram_message() {
+	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+	-d chat_id="${TG_CHAT_ID}" \
+	-d parse_mode="HTML" \
+	-d text="$1"
+}
+
 # Change to the Source Directry
 cd ~/twrp
 
