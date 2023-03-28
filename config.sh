@@ -1,9 +1,9 @@
 #!/bin/bash
 
-export PBRP_BRANCH="android-12.1"
+export PBRP_BRANCH="android-11.0"
 
 # Device
-export DT_LINK="https://github.com/GunjanSkry/android_device_realme_nicky-pbrp.git -b android-12.1"
+export DT_LINK="https://github.com/GunjanSkry/android_device_realme_nicky-pbrp.git -b android-11"
 
 export DEVICE="nicky"
 export OEM="realme"
