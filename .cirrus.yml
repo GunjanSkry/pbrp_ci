@@ -1,6 +1,6 @@
 env:
     # RECOVERY REPOSITORY SOURCE TWRP,PBRP,SHRP
-    MANIFEST: --depth=1 -u https://github.com/PitchBlackRecoveryProject/manifest_pb
+    MANIFEST: --depth=1 -u https://github.com/PitchBlackRecoveryProject/manifest_pb.git
 
     # Config
     CONFIG: config.sh

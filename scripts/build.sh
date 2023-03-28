@@ -37,6 +37,6 @@ export ALLOW_MISSING_DEPENDENCIES=true
 
 # lunch the target
 lunch omni_${DEVICE}-eng   || { echo "ERROR: Failed to lunch the target!" && exit 1; }
-mka -j$(nproc --all) pbrp
+mka recoveryimage
 # Exit
 exit 0
