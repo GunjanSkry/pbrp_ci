@@ -20,7 +20,10 @@ echo -e \
 
 ✔️ The Build has been Triggered!
 
-📱 Device: "${DEVICE}
+📱 Device: "${DEVICE}"
+🖥 Build System: "${PBRP_BRANCH}"
+🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
+" > tg.html
 
 TG_TEXT=$(< tg.html)
 
@@ -37,6 +40,6 @@ export ALLOW_MISSING_DEPENDENCIES=true
 
 # lunch the target
 lunch omni_${DEVICE}-eng   || { echo "ERROR: Failed to lunch the target!" && exit 1; }
-mka recoveryimage
+mka -j$(nproc --all) pbrp
 # Exit
 exit 0
