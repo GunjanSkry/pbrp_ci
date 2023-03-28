@@ -11,7 +11,7 @@ export DT_PATH="device/$OEM/$DEVICE"
 
 export TARGET="recoveryimage"
 
-export OUTPUTZIP="recovery*.zip"
+export OUTPUTZIP="PBRP*.zip"
 export OUTPUTIMG="recovery*.img"
 
 # Kernel Source
