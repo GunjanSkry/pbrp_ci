@@ -18,11 +18,6 @@ telegram_message() {
 	-d text="$1"
 }
 
-# Clone the Sync Repo
-repo init $MANIFEST -b $PBRP_BRANCH
-cd ~/twrp
-
-
 echo -e \
 "
 🦊 PBRP Recovery CI
@@ -38,6 +33,9 @@ TG_TEXT=$(< tg.html)
 
 telegram_message "${TG_TEXT}"
 echo " "
+
+# Clone the Sync Repo
+repo init $MANIFEST -b $PBRP_BRANCH
 
 # Sync the Sources
 repo sync || { echo "ERROR: Failed to TWRP source!" && exit 1; }
