@@ -19,8 +19,25 @@ telegram_message() {
 }
 
 # Clone the Sync Repo
-repo init $MANIFEST
+repo init $MANIFEST -b $PBRP_BRANCH
 cd ~/twrp
+
+
+echo -e \
+"
+🦊 PBRP Recovery CI
+
+✔️ The Syncing has been started!
+
+📱 Device: "${DEVICE}"
+🖥 Build System: "${PBRP_BRANCH}"
+🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
+" > tg.html
+
+TG_TEXT=$(< tg.html)
+
+telegram_message "${TG_TEXT}"
+echo " "
 
 # Sync the Sources
 repo sync || { echo "ERROR: Failed to TWRP source!" && exit 1; }
