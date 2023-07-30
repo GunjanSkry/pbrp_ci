@@ -5,7 +5,7 @@ export PBRP_BRANCH="android-12.1"
 # Device
 export DT_LINK="https://github.com/GunjanSkry/device_realme_RMX1971.git -b twrp-11"
 
-export DEVICE="nicky"
+export DEVICE="RMX1971"
 export OEM="realme"
 export DT_PATH="device/$OEM/$DEVICE"
 
