@@ -37,8 +37,8 @@ fi
 
 # Upload to WeTransfer
 # NOTE: the current Docker Image, "registry.gitlab.com/sushrut1101/docker:latest", includes the 'transfer' binary by Default
-transfer wet $ZIPFILENAME > link.txt || { echo "ERROR: Failed to Upload the ZIP Build!" && exit 1; }
-transfer wet $IMGFILENAME > link1.txt || { echo "ERROR: Failed to Upload the IMG Build!" && exit 1; }
+# transfer wet $ZIPFILENAME > link.txt || { echo "ERROR: Failed to Upload the ZIP Build!" && exit 1; }
+# transfer wet $IMGFILENAME > link1.txt || { echo "ERROR: Failed to Upload the IMG Build!" && exit 1; }
 # Mirror to oshi.at
 curl -T $ZIPFILENAME https://oshi.at/${ZIPFILENAME}/${TIMEOUT} > mirror.txt || { echo "WARNING: Failed to Mirror the ZIP Build!"; }
 curl -T $IMGFILENAME https://oshi.at/${IMGFILENAME}/${TIMEOUT} > mirror1.txt || { echo "WARNING: Failed to Mirror the IMG Build!"; }
