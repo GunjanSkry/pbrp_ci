@@ -19,7 +19,7 @@ task:
   container:
       image: ghcr.io/sushrut1101/docker:latest
       cpu: 8
-      memory: 16G
+      memory: 12G
 
   Checks_script:
       - curl -sL https://raw.githubusercontent.com/GunjanSkry/pbrp_ci/main/scripts/checks.sh | bash
